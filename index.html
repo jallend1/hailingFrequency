@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hailing Frequency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Hailing Frequency</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>Discovery</li>
+                <li>TNG</li>
+                <li>DS9</li>
+            </ul>
+        </nav>
+        <main>
+            <ul id="chatwindow">
+                <li></li>
+            </ul>
+            <form>
+                <label for="newchat">Message to broadcast:</label>
+                <input type="text" name="newchat" placeholder="Enter new message">
+                <label for="user">Update username:</label>
+                <input type="text" name="user" placeholder="Type new username">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCK8YJOwB3_tgrFiZL2fpkC4OGCthDYxYE",
+            authDomain: "trekchat-ac16c.firebaseapp.com",
+            databaseURL: "https://trekchat-ac16c.firebaseio.com",
+            projectId: "trekchat-ac16c",
+            storageBucket: "trekchat-ac16c.appspot.com",
+            messagingSenderId: "602182627554",
+            appId: "1:602182627554:web:a0036d211c9186c78c6ebb"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

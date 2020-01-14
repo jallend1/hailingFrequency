@@ -1,0 +1,12 @@
+nav ul{
+    padding: 0;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+}
+
+main li{
+    list-style: none;
+}
