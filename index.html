@@ -8,29 +8,46 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="container">
+    <div id="wrapper">
         <header>
-            <h1>Hailing Frequency</h1>
+            <div id="start"></div>
+            <div class="empty"></div>
+            <h1><span>Hailing</span> Frequency</h1>
+            <div class="empty"></div>
+                <div></div>
+            <div id="subtitle">A Star Trek Chat Room</div>
         </header>
-        <nav>
-            <ul>
-                <li>Discovery</li>
-                <li>TNG</li>
-                <li>DS9</li>
-            </ul>
-        </nav>
-        <main>
-            <ul id="chatwindow">
-                <li></li>
-            </ul>
-            <form>
-                <label for="newchat">Message to broadcast:</label>
-                <input type="text" name="newchat" placeholder="Enter new message">
-                <label for="user">Update username:</label>
-                <input type="text" name="user" placeholder="Type new username">
-                <input type="submit" value="Submit">
-            </form>
-        </main>
+        <div id="container">
+            <nav>
+                <ul>
+                    <li>TOS</li>
+                    <li>TNG</li>
+                    <li>DS9</li>
+                    <li>VOY</li>
+                    <li>DISCO</li>
+                </ul>
+            </nav>
+            <main>
+                <ul id="chatwindow">
+                    <li></li>
+                </ul>
+            </main>
+                    <form>
+                        <div>
+                            <div>
+                                <label for="newchat">Message to broadcast:</label>
+                                <input id="message" type="text" name="newchat" placeholder="Enter new message">
+                            </div>
+                            <div>
+                                <label for="user">Update username:</label>
+                                <input type="text" name="user" placeholder="Type new username">
+                            </div>
+                            <div>
+                                <input id="submit" type="submit" value="Transmit">
+                            </div>
+                        </form>
+            </div>
+        </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
@@ -51,4 +68,5 @@
     </script>
     <script src="app.js"></script>
 </body>
+
 </html>

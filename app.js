@@ -1,5 +1,8 @@
 const form = document.querySelector('form');
 const chatWindow = document.querySelector('#chatwindow');
+document.getElementById('message').focus();                             //Puts cursor in Message input
+
+
 let author = "Anonymous"
 if(localStorage.localUsername){
     author = localStorage.localUsername;
