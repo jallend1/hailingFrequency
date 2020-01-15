@@ -9,17 +9,6 @@ const updateUsername = document.querySelector('#updateUsername');
 const identifier = document.querySelector('#identifier');
 document.getElementById('message').focus();                             //Puts cursor in Message input
 
-const existingChats = () => {
-    db.collection(chatRoom).orderBy("timestamp").onSnapshot(snapshot => {
-        snapshot.docChanges().forEach(chat => {
-            if(chat.type === 'added'){
-                chatWindow.innerHTML+= `
-                    <li>${chat.doc.data().chat} <span id="displayedName">-${chat.doc.data().username}</span></li>
-                `
-            }
-        });
-    });
-}
 
 const changeRoom = (room) => {
     chatWindow.innerHTML = "";
@@ -43,15 +32,7 @@ if(localStorage.localUsername){             //Loads up existing username
     broadcastName.textContent = author;
 }
 
-// Sends chat to database
-const addChat = () => {
-    db.collection(chatRoom).add({
-        chat: form.newchat.value,
-        username: author,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    });
-    form.reset();
-}
+
 
 // Updates author information and also stores it locally
 const addAuthor = () =>{
