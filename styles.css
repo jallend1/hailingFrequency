@@ -10,7 +10,7 @@ body{
 
 #container{
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 5fr 2fr;
     margin: auto;
 }
 
@@ -28,7 +28,6 @@ header{
 #start{
     background: #cc99cc;
     width: 95%;
-    /* height: 100%; */
     border-radius: 50px 0px 0px 50px;
 }
 
@@ -45,7 +44,6 @@ h1 span{
 #subtitle{
     box-sizing: border-box;
     padding-top: 0px;
-    padding-left: 10px;
     width: 150px;
     border-radius: 0 50px 50px 0;
     background: #ff9900;
@@ -55,31 +53,44 @@ h1 span{
 
 nav ul{
     padding: 0;
-    /* display: flex;
-    justify-content: space-evenly; */
 }
 
 nav li{
     list-style: none;
-    /* display: inline; */
     background: #C66;
-    width: 100%;
-    min-width: 150px;
+    color: black;
+    font-weight: 800;
+    width: 150px;
     height: 2em;
     margin-top: 5px;
-    padding-top: 1em;
-    text-align: center;
+    padding: 2em 1.5em 0em 0em;
+    text-align: right;
     border-radius: 50px;
 }
 
 main{
-    width: 500px;
+    width: 80%;
     margin: auto;
+    border: solid 2px white;
 }
 
 main li{
     list-style: none;
     margin: 0.5em;
+    text-align: center;
+}
+
+#picture{
+    margin: auto;
+}
+
+#logo{
+    max-width: 400px;
+}
+
+#displayedName{
+    color: #fc9;
+    padding-left: 1em;
 }
 
 form{
@@ -95,10 +106,18 @@ input{
     margin: .5em;
 }
 
+.hide{
+    display: none;
+}
+
 #submit{
     width: 150px;
     border-radius: 0px 50px 50px 0px;
     background: #99c;
     padding: 5px;
     margin: 5px;
+}
+
+.selected{
+    background: #99F;
 }

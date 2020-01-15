@@ -22,8 +22,9 @@
                 <ul>
                     <li>TOS</li>
                     <li>TNG</li>
-                    <li>DS9</li>
+                    <li class="selected">DS9</li>
                     <li>VOY</li>
+                    <li>ENT</li>
                     <li>DISCO</li>
                 </ul>
             </nav>
@@ -32,21 +33,25 @@
                     <li></li>
                 </ul>
             </main>
-                    <form>
-                        <div>
-                            <div>
-                                <label for="newchat">Message to broadcast:</label>
-                                <input id="message" type="text" name="newchat" placeholder="Enter new message">
-                            </div>
-                            <div>
-                                <label for="user">Update username:</label>
-                                <input type="text" name="user" placeholder="Type new username">
-                            </div>
-                            <div>
-                                <input id="submit" type="submit" value="Transmit">
-                            </div>
-                        </form>
+            <div id="picture">
+                <img id="logo" src="images/ds9.png" alt="">
             </div>
+        </div>
+        <form>
+            <div>
+                <div>
+                    <label for="newchat">Message to broadcast:</label>
+                    <input id="message" type="text" name="newchat" placeholder="Enter new message">
+                </div>
+                <p id="identifier">Broadcasting as <span id="broadcastName">Anonymous</span> ( <span>Click to change</span> )</p>
+                <div id="updateUsername" class="hide">
+                    <label for="user">Update username:</label>
+                    <input type="text" name="user" placeholder="Type new username">
+                </div>
+                <div>
+                    <input id="submit" type="submit" value="Transmit">
+                </div>
+                            </form>
         </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
