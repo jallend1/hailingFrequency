@@ -9,7 +9,6 @@ const updateUsername = document.querySelector('#updateUsername');
 const identifier = document.querySelector('#identifier');
 document.getElementById('message').focus();                             //Puts cursor in Message input
 
-
 const changeRoom = (room) => {
     chatWindow.innerHTML = "";
     logo.setAttribute('src', `images/${room}.png`)
@@ -17,9 +16,7 @@ const changeRoom = (room) => {
     li.forEach(button => {
         button.innerText === chatRoom.toUpperCase() ? button.classList.add('selected') : button.classList.remove('selected');
     });
-    existingChats();
 }
-
 
 let chatRoom = 'ds9'                    
 if(localStorage.lastRoom){                  //Defaults to last used chat room
@@ -31,8 +28,6 @@ if(localStorage.localUsername){             //Loads up existing username
     author = localStorage.localUsername;
     broadcastName.textContent = author;
 }
-
-
 
 // Updates author information and also stores it locally
 const addAuthor = () =>{
@@ -69,7 +64,6 @@ ul.addEventListener('click', e => {
         changeRoom(chatRoom);
     }
 });
-
 
 // Reveals Update Username field on click
 identifier.addEventListener('click', () => {
